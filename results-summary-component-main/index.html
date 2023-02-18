@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Frontend Mentor | Results summary component</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				font-family: 'Hanken Grotesk', sans-serif;
+			}
+
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+
+			.Item_container {
+				width: 100%;
+				height: fit-content;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.container {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				width: fit-content;
+			}
+			.card1 {
+				background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+				width: 330px;
+				height: 400px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				border-radius: 16px;
+				color: hsl(0, 0%, 100%);
+			}
+
+			.circular {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				border-radius: 50%;
+				width: 150px;
+				height: 150px;
+				text-align: center;
+				background: linear-gradient(
+					hsla(256, 72%, 46%, 1),
+					hsla(241, 72%, 46%, 0)
+				);
+			}
+
+			h1 {
+				font-size: 48px;
+				font-weight: 800;
+			}
+
+			.gt {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				width: 250px;
+				margin-top: 20px;
+			}
+
+			span {
+				font-size: 16px;
+				font-weight: 500;
+				color: hsl(241, 100%, 89%);
+			}
+
+			.result {
+				font-weight: 700;
+				margin-bottom: 26px;
+				color: hsl(241, 100%, 89%);
+			}
+
+			h2 {
+				font-size: 2rem;
+				font-weight: 700;
+				margin-top: 16px;
+			}
+			p {
+				margin-top: 14px;
+				line-height: 22px;
+				width: 220px;
+				margin-bottom: 18px;
+				color: hsl(241, 100%, 89%);
+			}
+
+			.card2 {
+				margin-left: 30px;
+			}
+			.card2Inner {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+			}
+
+			.score_visuals {
+				display: flex;
+				align-items: center;
+			}
+			.r_v {
+				display: flex;
+				align-items: center;
+				padding: 8px;
+			}
+
+			img {
+				margin-left: 10px;
+				margin-right: 10px;
+			}
+
+			.num_v {
+				margin-left: 4px;
+			}
+
+			.summary {
+				margin-left: 10px;
+			}
+			button {
+				width: 270px;
+				padding: 14px;
+				border-radius: 22px;
+				font-size: 18px;
+				font-weight: 700;
+				border: none;
+				background: hsl(224, 30%, 27%);
+				color: hsl(0, 0%, 100%);
+			}
+
+			.c_red {
+				color: hsl(0, 100%, 67%);
+			}
+
+			.c_yellow {
+				color: hsl(39, 100%, 56%);
+			}
+
+			.c_teal {
+				color: hsl(166, 100%, 37%);
+			}
+
+			.c_blue {
+				color: hsl(234, 85%, 45%);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="Item_container">
+			<div class="container">
+				<div class="card1">
+					<h2 class="result">Your Result</h2>
+					<div class="circular">
+						<h1>76</h1>
+						<span>of 100</span>
+					</div>
+					<div class="gt">
+						<h2>Great</h2>
+						<p>
+							You scored higher than 65% of the people who have taken these
+							tests.
+						</p>
+					</div>
+				</div>
+				<div class="card2">
+					<h2 class="summary">Summary</h2>
+					<div class="card2Inner">
+						<div class="score_card">
+							<!-- reaction -->
+							<div class="score_visuals">
+								<p class="r_v c_red">
+									<img src="./assets/images/icon-reaction.svg" /> Reaction
+								</p>
+								<h3>80 <span class="num_v">/ 100</span></h3>
+							</div>
+							<!-- Memory -->
+							<div class="score_visuals">
+								<p class="r_v c_yellow">
+									<img src="./assets/images/icon-memory.svg" /> Memory
+								</p>
+								<h3>92 <span class="num_v"> / 100</span></h3>
+							</div>
+							<!-- Verbal -->
+							<div class="score_visuals">
+								<p class="r_v c_teal">
+									<img src="./assets/images/icon-verbal.svg" /> Verbal
+								</p>
+								<h3>61 <span class="num_v">/ 100</span></h3>
+							</div>
+							<!-- Visual -->
+							<div class="score_visuals">
+								<p class="r_v c_blue">
+									<img src="./assets/images/icon-visual.svg" /> Visual
+								</p>
+								<h3>72<span class="num_v">/ 100</span></h3>
+							</div>
+						</div>
+
+						<!-- Button -->
+						<button>Continue</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Vishnu Kumar</a>.
+		</div>
+	</body>
+</html>
